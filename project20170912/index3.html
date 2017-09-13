@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>简易留言板</title>
+	<meta charset="utf-8" />
+    <script src="jquery-1.10.2.min.js"></script>
+    <script type="text/javascript">
+        function PostCon()
+        {
+            var trcon = $("#trCon").val();
+            localStorage.setItem("k_trcon", trcon);
+            alert("发表成功");
+           // alert(localStorage.getItem("k_trcon");
+        }
+
+    </script>
+</head>
+<body>
+    <div><textarea id="trCon" cols="30" rows="8"></textarea></div>
+    <div><input type="button" value="发表" onclick="PostCon()"/><input type="button" value="清除" onclick=""></div>
+    
+</body>
+</html>
