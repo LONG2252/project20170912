@@ -4,34 +4,25 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
 	<meta charset="utf-8" />
-    <script src="js/jquery-1.10.2.min.js"></script>
-    <script type="text/javascript">
-        function MyClick1()
-        {
-            var username = $("#txtUserName").val();
-            var pwd = $("txtPwd").val();
-            //sessionStorage.setItem("k_username", username);
-            //sessionStorage.setItem("k_pwd", pwd);
-            localStorage.setItem("k_username", username);
-            localStorage.setItem("k_pwd", pwd);
-            alert("存储成功！");
+    <style type="text/css">
+        *{
+            padding:0px;
+            margin:0px;
         }
-        function MyClick2()
+    </style>
+    <script type="text/javascript">
+        function Draw()
         {
-            //alert(sessionStorage.getItem("k_username"));
-            //alert(sessionStorage.getItem("k_pwd"));
-            alert(localStorage.getItem("k_username"));
-            localStorage.clear();
-            alert(localStorage.getItem("k_username"));
-
+            var c =document.getElementById("mycanvas");
+            c.width = 500;
+            c.height = 500;
+            var ctx = c.getContext("2d");
+            ctx.fillRect(0,0,200,200);
         }
     </script>
 </head>
-<body background="img/1.jpg" size="100%">
-    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-    <center><input type="text" id="txtUserName" /><br /><br />
-    <input type="password" id="txtPwd" /><br /><br />
-    <input type="button" value="存储" onclick="MyClick1()"/ >
-    <input type="button" value="显示" onclick="MyClick2()" </center>
+<body>
+    <canvas id="mycanvas"></canvas>
+    <input type="button" value="画图" onclick="Draw()"/>
 </body>
 </html>

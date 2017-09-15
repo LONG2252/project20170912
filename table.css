@@ -1,0 +1,15 @@
+﻿body {
+}
+table
+{
+    color:red;
+    font-family:KaiTi;
+    width:400px;
+    height:400px;
+    border-collapse:collapse;
+}
+th,td
+{
+    border:2px solid green;
+    text-align:center;
+}
